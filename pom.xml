@@ -12,7 +12,7 @@
 	<artifactId>proyectoblog</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Proyecto Blog Peliculas</name>
-	<description>App de tipo foroblog para recomendaciones de peliculas y donde encontrarlas</description>
+	<description>App de tipo foro-blog para recomendaciones de peliculas y donde encontrarlas</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
