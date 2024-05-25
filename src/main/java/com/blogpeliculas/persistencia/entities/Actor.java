@@ -19,6 +19,9 @@ public class Actor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nombre;
+    private String wiki;
+
+    @ManyToMany(mappedBy = "elenco")
     private Set<Pelicula> peliculas;
 
 }
