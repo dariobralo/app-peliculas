@@ -13,7 +13,7 @@ import java.util.Set;
 @AllArgsConstructor
 @Entity
 @Table(name = "directores")
-public class Director {
+public class DirectorEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,6 +23,6 @@ public class Director {
     private String wiki;
 
     @OneToMany(mappedBy = "director", fetch = FetchType.LAZY)
-    private Set<Pelicula> peliculas;
+    private Set<PeliculaEntity> peliculas;
 
 }

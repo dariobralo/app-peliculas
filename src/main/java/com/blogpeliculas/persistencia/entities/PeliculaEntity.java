@@ -15,7 +15,7 @@ import java.util.List;
 @AllArgsConstructor
 @Entity
 @Table(name = "peliculas")
-public class Pelicula {
+public class PeliculaEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,16 +31,16 @@ public class Pelicula {
 
     @ManyToOne
     @JoinColumn(name = "director_id")
-    private Director director;
+    private DirectorEntity director;
 
     @ManyToMany
     @JoinTable(name = "peliculas_actores",
             joinColumns = @JoinColumn(name = "pelicula_id"),
             inverseJoinColumns = @JoinColumn(name = "actor_id"))
-    private List<Actor> elenco;
+    private List<ActorEntity> elenco;
 
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "pelicula_id") //Unidireccional
-    private List<Comentario> comentarios;
+    private List<ComentarioEntity> comentarios;
 
 }

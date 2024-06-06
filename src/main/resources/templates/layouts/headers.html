@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<html xmlns:th="https://www.thymeleaf.org">
-<head th:fragment="header">
+<html lang="es" xmlns:th="https://www.thymeleaf.org">
+<head th:fragment="headmain(title)">
     <meta charset="utf-8">
-    <title>Blog Peliculas</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title th:text="${title} + ' - Blog Peliculas'"></title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <link rel="icon" href="#" type="image/x-icon">
 </head>
 <body></body>
 </html>

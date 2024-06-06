@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head th:replace="layouts/headers :: headmain('403')"></head>
+<body>
+
+<nav th:replace="layouts/components :: nav"></nav>
+
+<h1>403 - forbidden error</h1>
+<a th:href="@{/}">volver</a>
+
+<footer th:replace="layouts/components :: footer"></footer>
+
+</body>
+</html>

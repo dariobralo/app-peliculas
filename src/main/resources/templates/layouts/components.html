@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head ></head>
+<body>
+
+    <nav th:fragment="nav">
+        <div>
+            <a th:ref="@{/home}" class=""><h1>Blog Películas</h1></a>
+            <div sec:authorize="hasRole('ADMIN')"><a th:href="@{/admin/panel}">Panel</a></div>
+
+            <div sec:authorize="isAuthenticated()">
+                <p><span>Usuario: </span><span sec:authentication="name"></span></p>
+                <p><span>Roles: </span><span sec:authentication="principal.authorities"></span></p>
+            </div>
+            <a th:href="@{/logout}">Cerrar sesión</a>
+        </div>
+    </nav>
+
+
+    <footer th:fragment="footer"></footer>
+
+</body>
+</html>

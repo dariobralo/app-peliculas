@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head th:replace="layouts/headers :: headmain('Registro usuario')"></head>
+<body>
+<div>
+    <h1>Crear Nueva Cuenta</h1>
+
+        <div th:if="${errorForm != null}"><p th:text="${errorForm}"></p></div>
+        <div th:if="${usernameError != null}"><p th:text="${usernameError}"></p></div>
+        <div><p th:if="${param.error}">Complete los campos correctamente.</p></div>
+
+        <div>
+            <form th:action="@{/auth/registro}" th:object="${usuario}" method="post">
+                <div>
+                    <label for="username">Usuario</label><br>
+                    <input type="text" id="username" th:field="*{username}" >
+                </div>
+                <div>
+                    <label for="password">Contraseña</label><br>
+                    <input type="password" id="password" th:field="*{password}">
+                </div>
+                <div>
+                    <label for="passwordconfirm">Confirmar contraseña</label><br>
+                    <input type="password" id="passwordConfirm" th:field="*{passwordConfirm}">
+                </div>
+                <div>
+                    <button type="submit">Crear Cuenta</button>
+                </div>
+            </form>
+        </div>
+    <div><a th:href="@{/auth/login}">Ya tengo cuenta. Ir a login</a></div>
+</div>
+</body>
+</html>

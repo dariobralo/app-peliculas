@@ -14,7 +14,7 @@ import java.util.Date;
 @AllArgsConstructor
 @Entity
 @Table(name = "comentarios")
-public class Comentario {
+public class ComentarioEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,9 +25,10 @@ public class Comentario {
     @Temporal(TemporalType.DATE)
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     private Date fechaPublicacion;
+
 //    private Pelicula pelicula;
 
     @ManyToOne //Unidireccional
     @JoinColumn(name = "comentario_id")
-    private Usuario usuario;
+    private UsuarioEntity usuario;
 }

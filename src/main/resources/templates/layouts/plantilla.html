@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html xmlns:th="https://www.thymeleaf.org">
-<head>
-    <meta charset="utf-8">
-    <title></title>
-</head>
+<head th:replace="layouts/headers :: headmain('')"></head>
 <body>
+
+    <nav th:replace="layouts/components :: nav"></nav>
+
+    <footer th:replace="layouts/components :: footer"></footer>
 
 </body>
 </html>

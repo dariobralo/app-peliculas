@@ -13,7 +13,7 @@ import java.util.Set;
 @AllArgsConstructor
 @Entity
 @Table(name = "actores")
-public class Actor {
+public class ActorEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,6 +22,6 @@ public class Actor {
     private String wiki;
 
     @ManyToMany(mappedBy = "elenco")
-    private Set<Pelicula> peliculas;
+    private Set<PeliculaEntity> peliculas;
 
 }
