@@ -1,7 +1,37 @@
 <!DOCTYPE html>
 <html xmlns:th="https://www.thymeleaf.org">
-<head ></head>
+<head th:fragment="head(title)">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title th:text="${title} + ' - Blog Peliculas'"></title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <link rel="stylesheet" th:href="@{/css/fonts.css}">
+    <link rel="icon" href="#" type="image/x-icon">
+</head>
 <body>
+
+    <header th:fragment="header">
+        <div class="contenedor">
+            <h1 class="logotipo">FilmedIn</h1>
+            <nav>
+                <ul>
+                    <li>
+                        <div class="search">
+                            <input type="text" id="search" placeholder="Buscar" autocomplete="off">
+                            <button type="button" id="search-button">
+                                <img th:src="@{/iconos/lupa.png}" alt="Buscar">
+                            </button>
+                        </div>
+                    </li>
+                    <li><a th:href="@{/home}" class="activo">Inicio</a></li>
+                    <li><a href="#">Categorías</a></li>
+                    <li><a href="#">Más Recientes</a></li>
+                    <li><a href="#">Mi lista</a></li>
+                    <li><a th:href="@{/logout}">Cerrar sesión</a></li>
+            </nav>
+        </div>
+    </header>
 
     <nav th:fragment="nav">
         <div>

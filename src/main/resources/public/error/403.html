@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html xmlns:th="https://www.thymeleaf.org">
-<head th:replace="layouts/headers :: headmain('403')"></head>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>403</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <link rel="stylesheet" href="@{/css/fonts.css}">
+    <link rel="icon" href="#" type="image/x-icon">
+</head>
 <body>
 
-<nav th:replace="layouts/components :: nav"></nav>
+<header th:replace="layouts/components :: header"></header>
 
 <h1>403 - forbidden error</h1>
 <a th:href="@{/}">volver</a>

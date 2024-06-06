@@ -1,38 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-    <link rel="stylesheet" type="text/css" href="@{/css/main.css}">
-    <link rel="stylesheet" href="@{/css/fonts.css}">
-</head>
+<html lang="es" xmlns:th="https://www.thymeleaf.org">
+<head th:replace="layouts/components :: head('Home')"></head>
 <body>
 
     <!-- NavBar Start -->
-    <header>
-        <div class="contenedor">
-            <h1 class="logotipo">FilmedIn</h1>
-            <nav>
-                <ul>
-                    <li>
-                    <div class="search">
-                        <input type="text" id="search" placeholder="Buscar  ">
-                        <button type="button" id="search-button">
-                            <img src="" alt="Buscar">
-                        </button>
-                    </div>
-                    </li>
-                    <li><a href="#" class="activo">Inicio</a></li>
-                    <li><a href="#">Películas</a></li>
-                    <li><a href="#">Más Recientes</a></li>
-                    <li><a href="#">Mi lista</a></li>
-                    <li><a href="#">Cerrar sesión</a></li>
-            </nav>
-        </div>
-    </header>
+    <header th:replace="layouts/components :: header"></header>
     <!-- NavBar End -->
-
 
     <!-- Content Start -->
     <div class="contenedor">
@@ -40,10 +13,7 @@
     </div>
     <!-- content End -->
 
-
-    <footer >
-        
-    </footer>
+    <footer></footer>
 
     <script src="js/main.js"></script>
 

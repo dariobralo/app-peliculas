@@ -1,25 +1,11 @@
 <!DOCTYPE html>
 <html xmlns:th="https://www.thymeleaf.org">
-<head th:replace="layouts/headers :: headmain('Administracion')"></head>
+<head th:replace="layouts/components :: head('Administracion')"></head>
 
 <body>
 
-     <nav th:include="layouts/components :: nav"></nav>
-
-    <!-- **SideBar** -->
-    <div>
-        <ul>
-            <li>
-                <a th:href="#"><span>Películas</span></a>
-            </li>
-            <li>
-                <a th:href="#"><span>Usuarios</span></a>
-            </li>
-            <li>
-                <a th:href="#"><span>Otros enlaces</span></a>
-            </li>
-        </ul>
-    </div>
+    <header th:replace="layouts/components :: header"></header>
+    <h1>Panel Admin</h1>
 
 
 </body>
