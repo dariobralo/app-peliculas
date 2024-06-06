@@ -94,7 +94,29 @@ header nav a.activo {
 
 /* Formularios */
 .form {
+    width: 500px;
+    height: 600px;
+    border: white;
+    padding: 15px 10px;
+    background: var(--fondoclaro);
+    border-radius: 5px;
+    display:flex;
+    align-items: center;
+    margin-top: 1.5rem;
+}
 
+.form input{
+    background-color: transparent;
+    color: var(--blanco);
+    border: thin;
+    border-radius: 5px;
+}
+
+.form button{
+    background-color: transparent;
+    color: var(--blanco);
+    border: thin;
+    border-radius: 5px;    
 }
 
 /* ---- ----- ----- Pelicula Principal ----- ----- ----- */
